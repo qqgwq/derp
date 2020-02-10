@@ -1,0 +1,44 @@
+.posts {
+	@include outer-container;
+	margin-bottom: 150px;
+  margin-top: 20px;
+	@include span-columns(10);
+	@include shift(1);
+	position: relative;
+  width: 1000px;
+  background-color: $background;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #e3e3e3;
+}
+
+.post {
+	@include span-columns(2);
+	display: inline-block;
+  width: 186px;
+  height: 191px;
+  margin: 5px;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  background-position: center center;
+  background-size: cover;
+}
+.hover-tile-outer{
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hover-tile-outer:hover .posts-title,
+.hover-tile-outer:focus .posts-title {
+  opacity: 1;
+}
+
+.hover-tile-outer .posts-title {
+  opacity: 0.01;
+  min-height: 195px;
+  font-size: 1rem;
+  padding: 30px 25px 20px;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
